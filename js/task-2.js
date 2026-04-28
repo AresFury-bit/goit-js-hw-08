@@ -27,14 +27,14 @@ const images = [
 
 const a = [];
 images.forEach(image => {
-  a.push(`<li><img src="${image.url}" alt="${image.alt}" /></li>`);
+  a.push(`<li><img src="${image.url}" alt="${image.alt}" /></li>`
+    
+  );
 })
 
-
-a.join("");
 const gallery = document.querySelector(`.gallery`);
-const img = document.querySelector(`img`);
-gallery.innerHTML = a;
+const finalMarkup = a.join("")
+gallery.innerHTML = finalMarkup;
 
 
 

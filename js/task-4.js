@@ -10,7 +10,9 @@ loginForm.addEventListener('submit', e => {
     }
     if (value.email == "" || value.password == "") {
         alert("All form fields must be filled in");
+        return;
     }
+    loginForm.reset();
     console.log(value);
 })
 

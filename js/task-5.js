@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 const color = document.querySelector(".color");
-const button = document.querySelector("button");
+const button = document.querySelector(".change-color");
 
 
 button.addEventListener("click", () => {
