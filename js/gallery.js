@@ -78,8 +78,6 @@ function createMarkup(arr){
             src="${preview}"
             data-source="${original}"
             alt="${description}"
-            heigth ="360px"
-            width ="200px"
           />
         </a>
       </li>
@@ -94,45 +92,17 @@ gallery.addEventListener("click", hendleClick);
 
 function hendleClick(event) {
   event.preventDefault();
-  if (event.target === event.currentTarget){
+  if (!event.target.classList.contains("gallery-image")){
         return;
   }
-  // debugger;
- 
-  
-  const imageEl = event.target.closest(".gallery-item");
+
   const imagesource = event.target.dataset.source;
   console.log(imagesource);
 
- 
-    
   const instance = basicLightbox.create(`
 	<div class="modal">
-  <img src="${imagesource}" />
+  <img src="${imagesource}" heigth="1112px" width="640" />
   </div>
 `)
   instance.show();
 }
-
-//  const imagesrsOriginal = imageEl.dataset.source;
-
-
-
-
-
-
-// gallery_item = images.map(({ preview, original, description }) => {
-//     return ` 
-//     <li class="gallery-item">
-//         <a class="gallery-link" href="${original}">
-//           <img
-//             class="gallery-image"
-//             src="${preview}"
-//             data-source="${original}"
-//             alt="${description}"
-//           />
-//         </a>
-//       </li>
-//       `;
-
-// }).join("");

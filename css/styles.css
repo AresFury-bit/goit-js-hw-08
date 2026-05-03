@@ -20,3 +20,9 @@
     display: flex; 
     
 }
+
+.gallery-image{
+    heigth: 360px;
+    width: 200px;
+}
+
